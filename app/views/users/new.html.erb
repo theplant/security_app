@@ -1,0 +1,16 @@
+<h1>Register for Cats!</h1>
+
+<p>Register to comment and bookmark cats</p>
+
+<%= form_for @user do |f| %>
+  
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <div>
+    <%= f.button "Let Me Comment On The Cats!!!", class: "btn btn-primary" %>
+  </div>
+<% end %>

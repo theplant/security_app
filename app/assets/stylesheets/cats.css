@@ -1,0 +1,43 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+#cat-list img {
+  max-width: 130px;
+  max-height: 130px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#cat-list .cat {
+  text-align: center;
+  height: 140px;
+  background: #EEE;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+}
+
+#cat-list .cat:hover {
+  border-color: #09F;
+}
+
+#cat {
+  text-align: center;
+  max-height: 640px;
+  background: #EEE;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  padding: 20px;
+}
+
+#cat img {
+  max-height: 600px;
+}
+
+
+#comments textarea {
+  height: 100px;
+  width: 100%;
+}

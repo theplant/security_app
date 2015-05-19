@@ -1,0 +1,28 @@
+<div id="cat">
+  <%= image_tag(image_admin_cats_path(cat: @cat)) %>
+</div>
+<div id="meta">
+  <% exif = exif(@cat).split %>
+  <%= exif[2] %>
+  <%= exif[1] %>
+  <%= exif[6] %>
+</div>
+
+<div id="comments">
+  <h2>Comments</h2>
+
+  <table>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user.username %> </td>
+        <td><%= comment.created_at %></td>
+        <td>
+          <%== comment.comment %>
+        </td>
+        <td>
+        <%= button_to "Delete", admin_comment_path(comment), method: :delete, confirm: "Really delete this comment?" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

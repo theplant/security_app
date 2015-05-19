@@ -1,0 +1,20 @@
+<h1>Admin: Cats</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Filename</th>
+    <th>Comments</th>
+    <th>Image</th>
+  </tr>
+  </thead>
+    <tbody>
+      <% @cats.each do |cat| %>
+        <tr>
+          <td class="filename"><%= link_to cat, admin_cat_path(cat.sub(".", "%252e")) %><br><%= exif cat %></td>
+          <td class="comment-count"><%= Comment.where(cat: cat).count %></td>
+          <td class="image"><%= image_tag image_cats_path(cat: cat) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>

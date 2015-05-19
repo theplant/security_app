@@ -1,0 +1,32 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,th {
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+
+td.filename a {
+  display: block;
+}
+
+td.comment-count {
+  text-align: right;
+}
+
+td.image {
+  text-align: center;
+  height: 100px;
+}
+
+td.image img {
+  max-width: 100px;
+  max-height: 100px;
+}

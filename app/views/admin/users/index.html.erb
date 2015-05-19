@@ -1,0 +1,28 @@
+<h1>Admin: Users</h1>
+
+<%= link_to "All", admin_users_path %> :: 
+<%= link_to "Users", admin_users_path(filter: "role='user'") %> ::
+<%= link_to "Admins", admin_users_path(filter: "role='admin'") %>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Role</th>
+    <th></th>
+  </tr>
+  </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.username %></td>
+          <td><%= user.password %></td>
+          <td><%= user.role %></td>
+          <td>
+            <%= button_to "Delete", admin_user_path(user), method: :delete, confirm: "Really delete this user?" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
