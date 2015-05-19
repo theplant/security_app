@@ -1,4 +1,4 @@
-class Admin::CatsController < ApplicationController
+class Admin::CatsController < Admin::ApplicationController
   
   def index
     @cats = `ls #{Rails.root}/cats`.chomp.split
