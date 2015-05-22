@@ -5,6 +5,7 @@ gem "mysql2"
 gem "twitter-bootstrap-rails"
 gem "jquery-rails"
 gem "rake"
+gem "uglifier"
 
 group :development do
   gem "pry"
